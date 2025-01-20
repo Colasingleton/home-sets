@@ -83,6 +83,13 @@ public class AddPartController {
             return "Failure";
         }
         else {
+            //reduce by 1
+            part.setInv(inv-1);
+            repo.save(part);
+
+            // set new val of inv
+
+
             return "Success";
         }
 

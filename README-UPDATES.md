@@ -32,7 +32,7 @@ program does not overwrite data in DB
 Part F
 mainscreen.html - line 64 - buy now it created next to other buttons.
 AddPartController - lines 71-91 mapping for the buy now button maps to Success.html or Failure.html pages
-
+AddPartController lines 87-88 parts inventory de-increments by one when purchased.
 
 //////////
 Part G
