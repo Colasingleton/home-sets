@@ -48,6 +48,8 @@ public class BootStrapData implements CommandLineRunner {
 
         chair.setName("Arm Chair");
         chair.setInv(50);
+        chair.setMinInv(1);
+        chair.setMaxInv(60);
         chair.setPrice(200.00);
         chair.setId(1);
         inhousePartRepository.save(chair);
@@ -56,6 +58,8 @@ public class BootStrapData implements CommandLineRunner {
 
         rug.setName("Rug");
         rug.setInv(50);
+        rug.setMinInv(1);
+        rug.setMaxInv(60);
         rug.setPrice(100.00);
         rug.setId(2);
         inhousePartRepository.save(rug);
@@ -64,6 +68,8 @@ public class BootStrapData implements CommandLineRunner {
 
         lamp.setName("Lamp");
         lamp.setInv(50);
+        lamp.setMinInv(1);
+        lamp.setMaxInv(60);
         lamp.setPrice(50.00);
         lamp.setId(3);
         inhousePartRepository.save(lamp);
@@ -75,6 +81,8 @@ public class BootStrapData implements CommandLineRunner {
 
         coffeeTable.setName("Coffee Table");
         coffeeTable.setInv(50);
+        coffeeTable.setMinInv(1);
+        coffeeTable.setMaxInv(60);
         coffeeTable.setPrice(100.00);
         coffeeTable.setId(4);
         outsourcedPartRepository.save(coffeeTable);
@@ -83,6 +91,8 @@ public class BootStrapData implements CommandLineRunner {
 
         mirror.setName("Mirror");
         mirror.setInv(50);
+        mirror.setMinInv(1);
+        mirror.setMaxInv(60);
         mirror.setPrice(50.00);
         mirror.setId(5);
         outsourcedPartRepository.save(mirror);
@@ -94,7 +104,7 @@ public class BootStrapData implements CommandLineRunner {
         if(productRepository.count()==0){
 
             Product livingRoomSet = new Product();
-            livingRoomSet.setName("Lving Room Set");
+            livingRoomSet.setName("Living Room Set");
             livingRoomSet.setInv(10);
             livingRoomSet.setPrice(500.00);
             livingRoomSet.setId(101);

@@ -38,7 +38,7 @@ AddPartController lines 87-88 parts inventory de-increments by one when purchase
 Part G
 part.java - lines 31-16 & lines 99-107 - Added min and max getters and setters
 mainscreen.html - lines 53-56 & lines 65-68 - Added new min and max inventory columns
-
+BootStrapData.java - lines 104-141 - added min and max fields to the sample inventory
 //////////
 Part H
 
