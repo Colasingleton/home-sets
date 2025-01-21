@@ -68,33 +68,6 @@ public class AddPartController {
         }
     }
 
-    //cola's block start
-    @GetMapping("/buyNow")
-    public String buyNow(@RequestParam("partID") int theId,Model theModel) {
 
-        PartService repo = context.getBean(PartServiceImpl.class);
-       // OutsourcedPartService outsourcedrepo = context.getBean(OutsourcedPartServiceImpl.class);
-       // InhousePartService inhouserepo = context.getBean(InhousePartServiceImpl.class);
-
-        Part part = partService.findById(theId);
-
-        int inv = part.getInv();
-        if(inv == 0) {
-            return "Failure";
-        }
-        else {
-            //reduce by 1
-            part.setInv(inv-1);
-            repo.save(part);
-
-            // set new val of inv
-
-
-            return "Success";
-        }
-
-
-    }
-    //cola's block end
 
     }

@@ -173,4 +173,41 @@ public class AddProductController {
         theModel.addAttribute("availparts",availParts);
         return "productForm";
     }
-}
+
+    //cola's block start
+    @GetMapping("/buyNow")
+    public String buyNow(@RequestParam("productID") int theId, Model theModel) {
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        Product product2 = productService.findById(theId);
+
+
+        int inv = product2.getInv();
+        if(inv == 0) {
+            return "Failure";
+        }
+        product2.setInv(inv - 1);
+
+        for(Part part: product2.getParts()){
+            int partInventory = part.getInv();
+            if(partInventory==0) {
+                return "Failure";
+            }
+            part.setInv(partInventory - 1);
+            partService.save(part);
+        }
+
+        productService.save(product2);
+        //else {
+            //reduce by 1
+            //product2.setInv(inv-1);
+            //productService.save(product2);
+
+            // set new val of inv
+
+
+            return "Success";
+        }
+
+
+    }
+    //cola's block end
