@@ -40,7 +40,8 @@ part.java - lines 31-16 & lines 99-107 - Added min and max getters and setters
 mainscreen.html - lines 53-56 & lines 65-68 - Added new min and max inventory columns
 BootStrapData.java - lines 104-141 - added min and max fields to the sample inventory
 application.properties - line 6 - renamed persistent storage file
-
+OutsourcedPartForm.html - lines 29-37 - added new min and max fields for the form - updated P tags with headers
+InhousePartForm.html - lines 28-37 - added new min and max fields for the form - updated P tags with headers
 
 //////////
 Part H
