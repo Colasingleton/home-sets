@@ -42,6 +42,8 @@ BootStrapData.java - lines 104-141 - added min and max fields to the sample inve
 application.properties - line 6 - renamed persistent storage file
 OutsourcedPartForm.html - lines 29-37 - added new min and max fields for the form - updated P tags with headers
 InhousePartForm.html - lines 28-37 - added new min and max fields for the form - updated P tags with headers
+OutsourcedPartForm.html - lines 41-49 - added validator
+InhousePartForm.html - lines 41-49 - added validator
 
 //////////
 Part H
