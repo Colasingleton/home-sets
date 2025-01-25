@@ -47,11 +47,12 @@ InhousePartForm.html - lines 41-49 - added validator
 
 //////////
 Part H
-
-
+Created NotEnoughParts.html to display low part inventory when updating parts
+Created NotEnoughParts.html to display low part inventory when updating products
+InventoryValidator.java - lines 32-57 - Displays error message when inventory value is greater than max and min
 //////////
 Part I
-
+PartTest.java - lines 160-187 - 2 unit tests were made to test the min and max fields
 
 //////////
 Part J

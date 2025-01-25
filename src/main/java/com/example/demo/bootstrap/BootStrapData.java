@@ -48,7 +48,7 @@ public class BootStrapData implements CommandLineRunner {
 
         chair.setName("Arm Chair");
         chair.setInv(50);
-        chair.setMinInv(1);
+        chair.setMinInv(0);
         chair.setMaxInv(60);
         chair.setPrice(200.00);
         chair.setId(1);
@@ -58,7 +58,7 @@ public class BootStrapData implements CommandLineRunner {
 
         rug.setName("Rug");
         rug.setInv(50);
-        rug.setMinInv(1);
+        rug.setMinInv(0);
         rug.setMaxInv(60);
         rug.setPrice(100.00);
         rug.setId(2);
@@ -68,7 +68,7 @@ public class BootStrapData implements CommandLineRunner {
 
         lamp.setName("Lamp");
         lamp.setInv(50);
-        lamp.setMinInv(1);
+        lamp.setMinInv(0);
         lamp.setMaxInv(60);
         lamp.setPrice(50.00);
         lamp.setId(3);
@@ -81,7 +81,7 @@ public class BootStrapData implements CommandLineRunner {
 
         coffeeTable.setName("Coffee Table");
         coffeeTable.setInv(50);
-        coffeeTable.setMinInv(1);
+        coffeeTable.setMinInv(0);
         coffeeTable.setMaxInv(60);
         coffeeTable.setPrice(100.00);
         coffeeTable.setId(4);
@@ -91,7 +91,7 @@ public class BootStrapData implements CommandLineRunner {
 
         mirror.setName("Mirror");
         mirror.setInv(50);
-        mirror.setMinInv(1);
+        mirror.setMinInv(0);
         mirror.setMaxInv(60);
         mirror.setPrice(50.00);
         mirror.setId(5);

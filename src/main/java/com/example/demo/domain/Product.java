@@ -5,6 +5,7 @@ import com.example.demo.validators.ValidInventory;
 import com.example.demo.validators.ValidProductPrice;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -21,6 +22,10 @@ import java.util.Set;
 @ValidProductPrice
 @ValidEnufParts
 
+
+
+
+
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,8 +35,18 @@ public class Product implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+    //Cola's code block begins
+    @Min(value = 0, message = "Min Inventory value must be positive")
+    int minInv;
+    @Min(value = 0, message = "Max Inventory value must be positive")
+    int maxInv;
+    //Cola's code block ends
+
     @ManyToMany(cascade=CascadeType.ALL, mappedBy = "products")
     Set<Part> parts= new HashSet<>();
+
+
+
 
     public Product() {
     }
@@ -88,6 +103,16 @@ public class Product implements Serializable {
     public void setParts(Set<Part> parts) {
         this.parts = parts;
     }
+
+    //Cola's code block begins
+    public int getMinInv() { return minInv; }
+
+    public void setMinInv(int minInv) { this.minInv = minInv; }
+
+    public int getMaxInv() { return maxInv; }
+
+    public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
+    //Cola's code block ends
 
     public String toString(){
         return this.name;

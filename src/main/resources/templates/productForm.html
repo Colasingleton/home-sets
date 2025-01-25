@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Product Detail</h1>
-<form action="#" th:action="@{/showFormAddProduct}" th:object="${product}" method="POST"}>
+<form action="#" th:action="@{/showFormAddProduct}" th:object="${product}" method="POST">
     <!-- Add hidden form field to handle update -->
     <p><input type="hidden" th:field="*{id}"/></p>
 
@@ -26,11 +26,14 @@
     <p>Inventory Number:
         <input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
 
-    <p>
     <div th:if="${#fields.hasAnyErrors()}">
     <ul><li th:each="err: ${#fields.allErrors()}" th:text="${err}"></li></ul>
     </div>
-    </p>
+
+
+
+
+
     <p><input type="submit" value="Submit" /></p>
 </form>
 
@@ -77,6 +80,6 @@
     </table>
 
 <footer><a href="http://localhost:8080/">
-   Link to Main Screen</a></footer>
+   Home</a></footer>
 </body>
 </html>
