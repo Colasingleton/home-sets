@@ -52,6 +52,21 @@ public class AddProductController {
     public String submitForm(@Valid @ModelAttribute("product") Product product, BindingResult bindingResult, Model theModel) {
         theModel.addAttribute("product", product);
 
+
+
+        //cola's block
+        // Validate each part's inventory for min and max constraints
+        /*for (Part part : product.getParts()) {
+            if (part.getInv() < part.getMinInv()) {
+                bindingResult.rejectValue("parts", "inventory.tooLow", "Inventory for part " + part.getName() + " is below the minimum.");
+            }
+            if (part.getInv() > part.getMaxInv()) {
+                bindingResult.rejectValue("parts", "inventory.tooHigh", "Inventory for part " + part.getName() + " exceeds the maximum.");
+            }
+        }
+
+        //cola's block end */
+
         if(bindingResult.hasErrors()){
             ProductService productService = context.getBean(ProductServiceImpl.class);
             Product product2 = new Product();
@@ -181,33 +196,25 @@ public class AddProductController {
         Product product2 = productService.findById(theId);
 
 
+
         int inv = product2.getInv();
-        if(inv == 0) {
+        if (inv == 0) {
             return "Failure";
         }
         product2.setInv(inv - 1);
 
-        for(Part part: product2.getParts()){
+        for (Part part : product2.getParts()) {
             int partInventory = part.getInv();
-            if(partInventory==0) {
-                return "Failure";
+            if (partInventory == 0) {
+                return "NotEnoughParts";
             }
             part.setInv(partInventory - 1);
             partService.save(part);
         }
 
         productService.save(product2);
-        //else {
-            //reduce by 1
-            //product2.setInv(inv-1);
-            //productService.save(product2);
 
-            // set new val of inv
-
-
-            return "Success";
-        }
-
-
+        return "Success";
     }
+}
     //cola's block end
