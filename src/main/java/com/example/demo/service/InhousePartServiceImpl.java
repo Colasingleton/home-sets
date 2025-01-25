@@ -55,10 +55,12 @@ public class InhousePartServiceImpl implements InhousePartService {
 
     }
 
+    //commented out for no usages
+/*
     @Override
     public void deleteById(int theId) {
         Long theIdl=(long)theId;
         partRepository.deleteById(theIdl);
-    }
+    } */
 
 }

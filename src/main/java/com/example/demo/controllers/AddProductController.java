@@ -28,7 +28,7 @@ public class AddProductController {
     @Autowired
     private ApplicationContext context;
     private PartService partService;
-    private List<Part> theParts;
+    //commented out for no usages - private List<Part> theParts;
     private static Product product1;
     private Product product;
 
@@ -51,21 +51,6 @@ public class AddProductController {
     @PostMapping("/showFormAddProduct")
     public String submitForm(@Valid @ModelAttribute("product") Product product, BindingResult bindingResult, Model theModel) {
         theModel.addAttribute("product", product);
-
-
-
-        //cola's block
-        // Validate each part's inventory for min and max constraints
-        /*for (Part part : product.getParts()) {
-            if (part.getInv() < part.getMinInv()) {
-                bindingResult.rejectValue("parts", "inventory.tooLow", "Inventory for part " + part.getName() + " is below the minimum.");
-            }
-            if (part.getInv() > part.getMaxInv()) {
-                bindingResult.rejectValue("parts", "inventory.tooHigh", "Inventory for part " + part.getName() + " exceeds the maximum.");
-            }
-        }
-
-        //cola's block end */
 
         if(bindingResult.hasErrors()){
             ProductService productService = context.getBean(ProductServiceImpl.class);

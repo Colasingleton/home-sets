@@ -16,5 +16,5 @@ public interface InhousePartService {
     public List<InhousePart> findAll();
     public InhousePart findById(int theId);
     public void save (InhousePart thePart);
-    public void deleteById(int theId);
+    //commented out for no usages - public void deleteById(int theId);
 }

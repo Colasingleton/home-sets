@@ -107,11 +107,11 @@ public class Product implements Serializable {
     //Cola's code block begins
     public int getMinInv() { return minInv; }
 
-    public void setMinInv(int minInv) { this.minInv = minInv; }
+    //commented out for no usages - public void setMinInv(int minInv) { this.minInv = minInv; }
 
     public int getMaxInv() { return maxInv; }
 
-    public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
+    //commented out for no usages -  public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
     //Cola's code block ends
 
     public String toString(){
