@@ -1,6 +1,7 @@
 
 //////////
-Part C
+
+#Part C
 mainscreen.html Line 19 - Changed project name
 
 mainscreen.html Line 12 - added css link for main page styles
@@ -17,20 +18,20 @@ Created folders - static.images
 
 
 ///////////
-Part D
+#Part D
 about us page is completed with description and a link to mainscreen.html.
 
 mainscreen.html - line 33 house line to about.html
 
 
 //////////
-Part E
+#Part E
 bootstrapData.java - updated lines 40 - 133 with 5 parts and 5 products. 
 program does not overwrite data in DB
 
 
 //////////
-Part F
+#Part F
 mainscreen.html - line 64 - buy now it created next to other buttons.
 
 AddPartController - lines 71-91 mapping for the buy now button maps to Success.html or Failure.html pages.
@@ -39,7 +40,7 @@ AddPartController lines 87-88 parts inventory de-increments by one when purchase
 
 
 //////////
-Part G
+#Part G
 part.java - lines 31-16 & lines 99-107 - Added min and max getters and setters
 
 mainscreen.html - lines 53-56 & lines 65-68 - Added new min and max inventory columns
@@ -58,7 +59,7 @@ InhousePartForm.html - lines 41-49 - added validator
 
 
 //////////
-Part H
+#Part H
 Created NotEnoughParts.html to display low part inventory when updating parts
 
 Created NotEnoughParts.html to display low part inventory when updating products
@@ -67,15 +68,15 @@ InventoryValidator.java - lines 32-57 - Displays error message when inventory va
 
 
 //////////
-Part I
+#Part I
 PartTest.java - lines 160-187 - 2 unit tests were made to test the min and max fields
 
 
 //////////
-Part J
+#Part J
 ValidDeletePart & DeletePartValidator - un-used and removed. 
 
-Part.java - Commented out un-used import.
+#Part.java - Commented out un-used import.
 
 InhousePartServiceImpl - lines 59-64 - commented out method.
 
